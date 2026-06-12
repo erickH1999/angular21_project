@@ -1,0 +1,17 @@
+<p>{{deptname}}</p>
+
+<input type="text" [value]="deptname">
+
+<p [class]="className">Angular Data Binding</p>
+
+<input [type]="inputType">
+
+<button (click)="showMessage()">Show Message</button>
+
+<select (change)="changeCity()">
+    <option>Austin</option>
+    <option>Denver</option>
+    <option>New York</option>
+</select>
+
+<input type="text" [(ngModel)]="deptname" >

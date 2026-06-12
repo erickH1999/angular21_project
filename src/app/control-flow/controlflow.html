@@ -1,0 +1,87 @@
+<p>controlflow works!</p>
+
+<div class="row">
+    <div class="" col-md-3>
+        <input type="checkbox" [(ngModel)]="isShowText">Show textbox
+    </div>
+
+    @if(isShowText == true) {
+    <div class="" col-md-3>
+        <input type="textbox">
+    </div>
+    }
+</div>
+
+<div class="row">
+    <button (click)="ToggleLabelVisibility()">Toggle</button>
+</div>
+<div class="row">
+    @if (showSuccessLabel() == true) {
+    <label class="label-success">Success</label>
+    }
+
+    @else {
+    <label class="label-danger">error</label>
+    }
+
+</div>
+
+<div class="row">
+    <input type="number" [(ngModel)]="age">
+</div>
+
+<div class="row">
+
+
+
+    @if(age < 18) { <span>Child</span>
+        }
+
+        @else if (age > 60) {
+        <span>Old</span>
+        }
+
+        @else {
+        <span>Young</span>
+        }
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="row">
+    <ul>
+        @for(item of courses; track $index) {
+        <li>{{item}}</li>
+        }
+
+
+    </ul>
+</div>
+
+<br>
+<br>
+<br>
+
+<table class="table">
+    <thead>
+
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+
+    </thead>
+    <tbody>
+
+        @for(item of deptList;track $index) {
+
+        }
+
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+        </tr>
+    </tbody>
+</table>

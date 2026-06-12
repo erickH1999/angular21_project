@@ -1,0 +1,52 @@
+<nav class="app-header">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+        <!-- Title -->
+        <div class="app-title">
+            <h3 class="m-0">Angular21_project</h3>
+            <small>Components, Signals & Routing</small>
+        </div>
+
+        <!-- Menu -->
+        <ul class="nav-menu">
+            <li>
+                <a routerLink="add-employee" routerLinkActive="active">
+                    Add Employee
+                </a>
+            </li>
+            <li>
+                <a routerLink="employee-list" routerLinkActive="active">
+                    Employees
+                </a>
+            </li>
+            <li>
+                <a routerLink="data-binding" routerLinkActive="active">
+                    Data Binding
+                </a>
+            </li>
+            <li>
+                <a routerLink="signals" routerLinkActive="active">
+                    Signals
+                </a>
+            </li>
+            <li>
+                <a routerLink="control-flow" routerLinkActive="active">
+                    Control Flow
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="attribute-directive" routerLinkActive="active">
+                    Attribute Directive
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+<main class="content-area">
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+</main>
