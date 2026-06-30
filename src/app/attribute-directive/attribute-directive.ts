@@ -20,6 +20,7 @@ export class AttributeDirective {
   //we will use this to assign dynamic background colors
   backColor="";
 
+  //dynamic styling for the background
   myCSS=
   {
     color: 'white',

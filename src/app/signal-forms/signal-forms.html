@@ -1,0 +1,22 @@
+<div class="row">
+
+    <div class="col-3">
+        <input type="text" [formField]="empForm.name">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        <input type="text" [formField]="empForm.email">
+
+        <div class="text">
+            @for(item of empForm.email().errors(); track $index) {
+                <span class="error">{{ item.message }}</span>
+            }
+        </div>
+    </div>
+</div>
+
+<div>
+    {{empForm().value() |json}}
+</div>

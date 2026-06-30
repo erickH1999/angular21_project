@@ -6,6 +6,9 @@ import { NotFound } from './not-found/not-found';
 import { Signals } from './signals/signals';
 import { Controlflow } from './control-flow/controlflow';
 import { AttributeDirective } from './attribute-directive/attribute-directive';
+import { ReactiveForms } from './reactive-forms/reactive-forms';
+import { Pipes } from './pipes/pipes';
+import { SignalForms } from './signal-forms/signal-forms';
 
 export const routes: Routes = [
 
@@ -48,6 +51,21 @@ export const routes: Routes = [
 {
     path:'attribute-directive',
     component:AttributeDirective,
+}, 
+
+{
+    path:'reactive-forms',
+    component:ReactiveForms,
+}, 
+
+{
+    path:'pipes',
+    component:Pipes,
+}, 
+
+{
+    path:'signal-forms',
+    component:SignalForms,
 }, 
 
 //route for when you enter an incorrect/false route
