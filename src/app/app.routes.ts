@@ -9,6 +9,7 @@ import { AttributeDirective } from './attribute-directive/attribute-directive';
 import { ReactiveForms } from './reactive-forms/reactive-forms';
 import { Pipes } from './pipes/pipes';
 import { SignalForms } from './signal-forms/signal-forms';
+import { LifeCycle } from './life-cycle/life-cycle';
 
 export const routes: Routes = [
 
@@ -66,6 +67,11 @@ export const routes: Routes = [
 {
     path:'signal-forms',
     component:SignalForms,
+}, 
+
+{
+    path:'life-cycle',
+    component:LifeCycle,
 }, 
 
 //route for when you enter an incorrect/false route

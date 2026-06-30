@@ -1,72 +1,84 @@
-<nav class="app-header">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
+<header class="app-header">
+  <div class="container-fluid">
 
-        <!-- Title -->
-        <div class="app-title">
-            <h3 class="m-0">Angular21_project</h3>
-            <small>Components, Signals & Routing</small>
-        </div>
-
-        <!-- Menu -->
-        <ul class="nav-menu">
-            <li>
-                <a routerLink="add-employee" routerLinkActive="active">
-                    Add Employee
-                </a>
-            </li>
-            <li>
-                <a routerLink="employee-list" routerLinkActive="active">
-                    Employees
-                </a>
-            </li>
-            <li>
-                <a routerLink="data-binding" routerLinkActive="active">
-                    Data Binding
-                </a>
-            </li>
-            <li>
-                <a routerLink="signals" routerLinkActive="active">
-                    Signals
-                </a>
-            </li>
-            <li>
-                <a routerLink="control-flow" routerLinkActive="active">
-                    Control Flow
-                </a>
-            </li>
-
-            <li>
-                <a routerLink="attribute-directive" routerLinkActive="active">
-                    Attribute Directive
-                </a>
-            </li>
-
-
-            <li>
-                <a routerLink="reactive-forms" routerLinkActive="active">
-                    Reactive Forms
-                </a>
-            </li>
-
-
-            <li>
-                <a routerLink="pipes" routerLinkActive="active">
-                    Pipes
-                </a>
-            </li>
-
-             <li>
-                <a routerLink="signal-forms" routerLinkActive="active">
-                    Signal Forms
-                </a>
-            </li>
-        </ul>
-
+    <div class="logo-section">
+      <div>
+        <h2>Angular 21 Project</h2>
+        <p>Components • Signals • Routing</p>
+      </div>
     </div>
-</nav>
+
+    <nav>
+      <ul class="nav-menu">
+
+        <li>
+          <a routerLink="add-employee" routerLinkActive="active">
+            👤 Add Employee
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="employee-list" routerLinkActive="active">
+            📋 Employees
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="data-binding" routerLinkActive="active">
+            🔗 Data Binding
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="signals" routerLinkActive="active">
+            ⚡ Signals
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="control-flow" routerLinkActive="active">
+            🔀 Control Flow
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="attribute-directive" routerLinkActive="active">
+            🎨 Directives
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="reactive-forms" routerLinkActive="active">
+            📝 Reactive Forms
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="pipes" routerLinkActive="active">
+            🛠 Pipes
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="signal-forms" routerLinkActive="active">
+            📡 Signal Forms
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="life-cycle" routerLinkActive="active">
+            🔄 Life Cycle
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+  </div>
+</header>
 
 <main class="content-area">
-    <div class="container">
-        <router-outlet></router-outlet>
-    </div>
+  <div class="content-card">
+    <router-outlet></router-outlet>
+  </div>
 </main>

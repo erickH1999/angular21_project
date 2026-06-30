@@ -1,17 +1,43 @@
-<p>{{deptname}}</p>
+<div class="container">
+  <div class="card">
+    <h2>Angular Data Binding Demo</h2>
 
-<input type="text" [value]="deptname">
+    <div class="section">
+      <label>Department Name</label>
+      <h3>{{ deptname }}</h3>
 
-<p [class]="className">Angular Data Binding</p>
+      <input
+        type="text"
+        [(ngModel)]="deptname"
+        placeholder="Enter department name"
+      />
+    </div>
 
-<input [type]="inputType">
+    <div class="section">
+      <label>One-Way Binding Example</label>
+      <input [type]="inputType" placeholder="Dynamic input type" />
+    </div>
 
-<button (click)="showMessage()">Show Message</button>
+    <div class="section">
+      <p [class]="className">
+        Angular Data Binding
+      </p>
+    </div>
 
-<select (change)="changeCity()">
-    <option>Austin</option>
-    <option>Denver</option>
-    <option>New York</option>
-</select>
+    <div class="button-group">
+      <button (click)="showMessage()">
+        Show Message
+      </button>
+    </div>
 
-<input type="text" [(ngModel)]="deptname" >
+    <div class="section">
+      <label>Select City</label>
+
+      <select (change)="changeCity()">
+        <option>Austin</option>
+        <option>Denver</option>
+        <option>New York</option>
+      </select>
+    </div>
+  </div>
+</div>
