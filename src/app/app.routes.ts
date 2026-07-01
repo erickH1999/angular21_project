@@ -10,6 +10,7 @@ import { ReactiveForms } from './reactive-forms/reactive-forms';
 import { Pipes } from './pipes/pipes';
 import { SignalForms } from './signal-forms/signal-forms';
 import { LifeCycle } from './life-cycle/life-cycle';
+import { GetApi } from './get-api/get-api';
 
 export const routes: Routes = [
 
@@ -72,6 +73,11 @@ export const routes: Routes = [
 {
     path:'life-cycle',
     component:LifeCycle,
+}, 
+
+{
+    path:'get-api',
+    component:GetApi,
 }, 
 
 //route for when you enter an incorrect/false route
