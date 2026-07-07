@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { Todo } from '../services/todo';
 
 @Component({
   selector: 'app-get-api',
@@ -11,9 +12,11 @@ export class GetApi implements OnInit {
 
 
   todoList: any[] = []; //property that will hold the list of todos retrieved from the API
-
+  todoService = inject(Todo); //inject the Todo service into the component, allowing it to be used within the component's methods
   //constructor that injects the HttpClient service into the component, allowing it to make HTTP requests
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    const res = this.todoService.ConcatStrings("Hello", "World");
+  }
 
   ngOnInit(): void {
     this.getTodos(); //call the getTodos method when the component is initialized
@@ -21,11 +24,12 @@ export class GetApi implements OnInit {
 
   //Method that makes an HTTP GET request to the specified URL and logs the result to the console
   getTodos() {
-    this.http.get('https://jsonplaceholder.typicode.com/todos').subscribe((result: any) => {
-      debugger; //pause the execution of the code and allow you to inspect the state of the application at this point
-      this.todoList = result; // Assign the retrieved todos to the todoList property
-      //console.log(result);
-    });
-
+    this.todoService.getTodos().subscribe(
+      {
+        next: (result: any) => {
+          this.todoList = result;
+        }
+      }
+    );
   }
 }

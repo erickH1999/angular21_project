@@ -11,6 +11,7 @@ import { Pipes } from './pipes/pipes';
 import { SignalForms } from './signal-forms/signal-forms';
 import { LifeCycle } from './life-cycle/life-cycle';
 import { GetApi } from './get-api/get-api';
+import { ServiceTest } from './service-test/service-test';
 
 export const routes: Routes = [
 
@@ -78,6 +79,11 @@ export const routes: Routes = [
 {
     path:'get-api',
     component:GetApi,
+}, 
+
+{
+    path:'service-test',
+    component:ServiceTest,
 }, 
 
 //route for when you enter an incorrect/false route
