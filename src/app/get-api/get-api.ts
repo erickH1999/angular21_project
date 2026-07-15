@@ -24,12 +24,9 @@ export class GetApi implements OnInit {
 
   //Method that makes an HTTP GET request to the specified URL and logs the result to the console
   getTodos() {
-    this.todoService.getTodos().subscribe(
-      {
-        next: (result: any) => {
-          this.todoList = result;
-        }
-      }
-    );
+   this.http.get("https://jsonplaceholder.typicode.com/todos").subscribe((result: any) => {
+    debugger; 
+    this.todoList = result;
+   })
   }
 }
